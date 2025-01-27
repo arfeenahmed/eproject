@@ -583,9 +583,10 @@ iframe {
 }
 
 .box-image4 {
-    background-image: url(img/pngegg\ \(4\).png);
+    background-image: url(img/pngegg\ \(15\).png);
     height: 280px;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 
