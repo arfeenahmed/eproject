@@ -80,9 +80,10 @@
                         <a href="" class="nav-user text-white text-decoration-none">
                             <i class="fa-regular fa-user"></i>
                         </a>
-                        <a href="" class="nav-cart text-white text-decoration-none">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
+                        <!-- <a href="" class="nav-cart text-white text-decoration-none"> -->
+                            <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                            <span class="cart-item-count"></span>
+                        
                     </div>
                 </div>
             </div>
@@ -90,29 +91,126 @@
     </nav>
 
 
+    <div class="cart-container">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <!-- <div class="cart-box">
+                <img src="img/Neck.png" alt="" class="cart-img">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Rose Quartz Crystal Necklace</h2>
+                    <span class="cart-price">$49.99</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash"></i>
+            </div> -->
+        </div>
+        <div class="cart-total">
+            <div class="cart-total-title">Total</div>
+            <div class="total-price">$0</div>
+        </div>
+        <button class="cart-buy-btn">Buy Now</button>
+        <span id="cart-close-btn">X</span>
+    </div>
 
 
 
-    <div class="container">
-        <div class="product">
-            <img src="img/Neck.png" alt="Rose Quartz Crystal Necklace">
-            <div class="product-details">
-                <h2>Rose Quartz Crystal Necklace</h2>
-                <p>Our Rose Quartz Crystal Necklace is a timeless piece that radiates love and serenity. Made with
-                    genuine rose quartz stones, this necklace adds elegance and positive energy to any outfit. Perfect
-                    for everyday wear or as a thoughtful gift for loved ones.</p>
-                <p><strong>Features:</strong></p>
-                <ul>
-                    <li>Authentic Rose Quartz crystals</li>
-                    <li>Handcrafted design</li>
-                    <li>Adjustable chain length</li>
-                    <li>Hypoallergenic materials</li>
-                </ul>
-                <p class="price">$49.99</p>
-                <button class="buy-btn">Add to Cart</button>
+
+     <!-- Shop Section -->
+     <section class="shop">
+        <h1 class="section-title">Shop Products</h1>
+        <div class="product-content">
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/pngegg (13).png" alt="">
+                </div>
+                <h2 class="product-title">Ring</h2>
+                <div class="price-and-cart">
+                    <span class="price">$100</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/pngegg (16).png" alt="">
+                </div>
+                <h2 class="product-title">Diamond Ring</h2>
+                <div class="price-and-cart">
+                    <span class="price">$100</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/pngegg (7).png" alt="">
+                </div>
+                <h2 class="product-title">Clear Quartz Bracelet</h2>
+                <div class="price-and-cart">
+                    <span class="price">$100</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/pngegg (15).png" alt="">
+                </div>
+                <h2 class="product-title">3X Diamond Ring</h2>
+                <div class="price-and-cart">
+                    <span class="price">$100</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/metal.png" alt="">
+                </div>
+                <h2 class="product-title">Earring Body Jewellery, Jewellery, metal</h2>
+                <div class="price-and-cart">
+                    <span class="price">$100</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/robe.png" alt="">
+                </div>
+                <h2 class="product-title">Earring Gemstones & Rhinestones</h2>
+                <div class="price-and-cart">
+                    <span class="price">$100</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/singapore.png" alt="">
+                </div>
+                <h2 class="product-title">Earring Singapore Jewellery Gold Necklace, Jewellery,</h2>
+                <div class="price-and-cart">
+                    <span class="price">$100</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/two.png" alt="">
+                </div>
+                <h2 class="product-title">two gold-colored bangles, Jewellery, Jewellery, ring, bracelet</h2>
+                <div class="price-and-cart">
+                    <span class="price">$100</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="payment">
         <h1 class="payTitle">Personal Information</h1>
@@ -136,134 +234,12 @@
         <button class="paybutton">Check Out!</button>
         <span class="close">X</span>
     </div>
+    
 
 
 
 
-    <!-- Shop Section -->
-    <div class="shop-section">
-        <div class="box box1">
-            <div class="box-content">
-                <h2>Upgrade your office furniture</h2>
-                <div class="box-image1"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box2">
-            <div class="box-content">
-                <h2>Shop Black <br> Friday deals</h2>
-                <div class="box-image2"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box3">
-            <div class="box-content">
-                <h2>Get your <br>game on</h2>
-                <div class="box-image3"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box4">
-            <div class="box-content">
-                <h2>Personal Care under $25</h2>
-                <div class="box-image4"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="shop-section">
-        <div class="box box1">
-            <div class="box-content">
-                <h2>Upgrade your office furniture</h2>
-                <div class="box-image1"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box2">
-            <div class="box-content">
-                <h2>Shop Black <br> Friday deals</h2>
-                <div class="box-image2"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box3">
-            <div class="box-content">
-                <h2>Get your <br>game on</h2>
-                <div class="box-image3"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box4">
-            <div class="box-content">
-                <h2>Personal Care under $25</h2>
-                <div class="box-image4"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="shop-section">
-        <div class="box box1">
-            <div class="box-content">
-                <h2>Upgrade your office furniture</h2>
-                <div class="box-image1"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box2">
-            <div class="box-content">
-                <h2>Shop Black <br> Friday deals</h2>
-                <div class="box-image2"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box3">
-            <div class="box-content">
-                <h2>Get your <br>game on</h2>
-                <div class="box-image3"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box4">
-            <div class="box-content">
-                <h2>Personal Care under $25</h2>
-                <div class="box-image4"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-    </div>
-    <div class="shop-section">
-        <div class="box box1">
-            <div class="box-content">
-                <h2>Upgrade your office furniture</h2>
-                <div class="box-image1"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box2">
-            <div class="box-content">
-                <h2>Shop Black <br> Friday deals</h2>
-                <div class="box-image2"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box3">
-            <div class="box-content">
-                <h2>Get your <br>game on</h2>
-                <div class="box-image3"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-        <div class="box box4">
-            <div class="box-content">
-                <h2>Personal Care under $25</h2>
-                <div class="box-image4"></div>
-                <a href="#">Shop Now</a>
-            </div>
-        </div>
-    </div>
-
+   
     <footer>
         <p>&copy; 2025 Crystal Jewelry. All Rights Reserved.</p>
     </footer>

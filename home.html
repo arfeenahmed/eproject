@@ -31,7 +31,7 @@
             <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header text-white border-bottom">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Crystal Jewellery</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
                     <button type="button " class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -52,12 +52,12 @@
                                 New Arrival
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Earring</a></li>
-                                <li><a class="dropdown-item" href="#">Neckles</a></li>
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Ring</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -67,7 +67,6 @@
                             <a class="nav-link mx-2" href="contact.html">Contact Us</a>
                         </li>
                     </ul>
-
                     <div class="right-nav d-flex justify-content-center align-items-center gap-3">
                         <a href="" class="nav-search text-white text-decoration-none">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -75,15 +74,42 @@
                         <a href="" class="nav-user text-white text-decoration-none">
                             <i class="fa-regular fa-user"></i>
                         </a>
-                        <a href="" class="nav-cart text-white text-decoration-none">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
+                        <!-- <a href="" class="nav-cart text-white text-decoration-none"> -->
+                            <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                        
                     </div>
-
                 </div>
             </div>
         </div>
     </nav>
+
+    <div class="cart-container">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <!-- <div class="cart-box">
+                <img src="img/Neck.png" alt="" class="cart-img">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Rose Quartz Crystal Necklace</h2>
+                    <span class="cart-price">$49.99</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+
+                    </div>
+                </div>
+                <i class="fa-solid fa-trash"></i>
+            </div> -->
+        </div>
+        <div class="cart-total">
+            <div class="cart-total-title">Total</div>
+            <div class="total-price">$0</div>
+        </div>
+        <button class="cart-buy-btn">Buy Now</button>
+        <span id="cart-close-btn">X</span>
+    </div>
+
+  
 
     <div class="hero">
         <img src="img/hh.png" class="img-hero" alt="">
@@ -103,21 +129,21 @@
     <div class="section">
         <h2>Our Bestsellers</h2>
         <div class="products">
-            <div class="product-card">
+            <div class="product-box">
                 <img src="img/1.png" alt="Rose Quartz Necklace">
-                <h3>Rose Quartz Necklace</h3>
+                <h3 class="product-title">Rose Quartz Necklace</h3>
                 <p>Elegant and calming, perfect for daily wear.</p>
                 <a href="#shop" class="cta-buttons">Shop Now</a>
             </div>
-            <div class="product-card">
+            <div class="product-box">
                 <img src="img/pngegg.png" alt="Amethyst Ring">
-                <h3>Amethyst Ring</h3>
+                <h3 class="product-title">Amethyst Ring</h3>
                 <p>Powerful and beautiful, brings clarity and peace.</p>
                 <a href="#shop" class="cta-buttons">Shop Now</a>
             </div>
-            <div class="product-card">
+            <div class="product-box">
                 <img src="img/pngegg (1).png" alt="Clear Quartz Bracelet">
-                <h3>Clear Quartz Bracelet</h3>
+                <h3 class="product-title">Clear Quartz Bracelet</h3>
                 <p>Amplify your energy with this versatile piece.</p>
                 <a href="#shop" class="cta-buttons">Shop Now</a>
             </div>
@@ -167,6 +193,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+
+        <script src="script.js"></script>
 
 </body>
 
