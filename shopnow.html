@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Jewelry - Elegant Rose Quartz Necklace</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+    .section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.section h2 {
+    color: #7a4b5a;
+    font-size: 36px;
+}
+
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #7a4b5a;
+}
+
+.product-card p {
+    color: #555;
+}
+
+
+
+.cta-buttons {
+    background-color: #d35400;
+    padding: 10px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cta-buttons:hover {
+    background-color: #867e77;
+    color: black;
+}
+
+/* Home End */
+
+/* Product Page Start */
+
+.product {
+    display: flex;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 50%;
+    max-width: 400px;
+}
+
+.product-details {
+    padding: 0 20px;
+    width: 50%;
+}
+
+.product-details h2 {
+    color: #7a4b5a;
+}
+
+.product-details p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.product-details .price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ce7171;
+}
+
+.product-details button {
+    padding: 10px 20px;
+    background-color: #ce7171;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.product-details button:hover {
+    background-color: #f3abab;
+}
+</style>
+    </head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><h2>Crystal Jewelry</h2></a>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Side Bar -->
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header text-white border-bottom">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button " class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body flex-column flex-lg-row">
+                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  mx-2" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="#">Special Offers</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mx-2" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                New Arrival
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="right-nav d-flex justify-content-center align-items-center gap-3">
+                        <a href="" class="nav-search text-white text-decoration-none">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        <a href="" class="nav-user text-white text-decoration-none">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                        
+                            <i class="fa-solid fa-cart-shopping"></i>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="container">
+        <div class="product">
+            <img src="img/1.png" alt="Rose Quartz Crystal Necklace">
+            <div class="product-details">
+                <h2>Rose Quartz Crystal Necklace</h2>
+                <p>Our Rose Quartz Crystal Necklace is a timeless piece that radiates love and serenity. Made with
+                    genuine rose quartz stones, this necklace adds elegance and positive energy to any outfit. Perfect
+                    for everyday wear or as a thoughtful gift for loved ones.</p>
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Authentic Rose Quartz crystals</li>
+                    <li>Handcrafted design</li>
+                    <li>Adjustable chain length</li>
+                    <li>Hypoallergenic materials</li>
+                </ul>
+                <p class="price">$49.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
