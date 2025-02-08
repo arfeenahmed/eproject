@@ -212,7 +212,7 @@ const newArrivaladdToCart = productBox => {
     const productTitle = productBox.querySelector(".jewelry-name").textContent;
     const productPrice = productBox.querySelector(".jewelry-price").textContent;
 
-    const cartItems = cartContent.querySelectorAll(".cart-product-title");
+    const cartItems = newArrivalcartContent.querySelectorAll(".cart-product-title");
     for(let item of cartItems){
         if (item.textContent === productTitle){
             alert("This item is already in the cart");
@@ -242,8 +242,8 @@ const newArrivaladdToCart = productBox => {
     newArrivalcartContent.appendChild(cartBox);
     cartBox.querySelector(".fa-trash-can").addEventListener("click",() => {
         cartBox.remove();
-        updateCartCount(-1);
-        updateTotalPrice();
+        newArrivalupdateCartCount(-1);
+        newArrivalupdateTotalPrice();
     });
     cartBox.querySelector(".cart-quantity").addEventListener("click",event => {
         const numberElement = cartBox.querySelector(".number");
@@ -294,3 +294,111 @@ const newArrivalupdateCartCount = change => {
         cartItemCountBadge.textContent = "";
     }
 }
+
+
+
+
+////Special offer
+
+
+
+// const offercartBtns = document.querySelectorAll(".add-cart-btn");
+// offercartBtns.forEach(button => {
+//     button.addEventListener("click", event =>{
+//         const offerProductBox = event.target.closest(".offer-card");
+       
+
+//         offeraddToCart(offerProductBox);
+//     });
+// });
+
+// const offercartContent = document.querySelector(".cart-content");
+
+// const offeraddToCart = offerProductBox => {
+//     const offerProductImage = offerProductBox.querySelector("img").src; 
+//     const offerProductTitle = offerProductBox.querySelector(".offer-product-title").textContent;
+//     const offerProductPrice = offerProductBox.querySelector(".sale-price").textContent;
+
+//     const cartItems = offercartContent .querySelectorAll(".cart-product-title");
+//     for(let item of cartItems){
+//         if (item.textContent === offerProductTitle){
+//             alert("This item is already in the cart");
+//             return;
+//         }
+//     }
+
+    
+//     const cartBox = document.createElement("div");
+//     cartBox.classList.add("cart-box");
+//     cartBox.innerHTML = `
+//     <img src="${offerProductImage}" alt="" class="cart-img">
+//                 <div class="cart-detail">
+//                     <h2 class="cart-product-title">${offerProductTitle}</h2>
+//                     <span class="cart-price">${offerProductPrice}</span>
+//                     <div class="cart-quantity">
+//                         <button id="decrement">-</button>
+//                         <span class="number">1</span>
+//                         <button id="increment">+</button>
+
+//                     </div>
+//                 </div>
+//                 <i class="fa-regular fa-trash-can"></i>
+//     `;
+
+  
+//     offercartContent.appendChild(cartBox);
+//     cartBox.querySelector(".fa-trash-can").addEventListener("click",() => {
+//         cartBox.remove();
+//        updateCartCount(-1);
+//         updateTotalPrice();
+//     });
+//     cartBox.querySelector(".cart-quantity").addEventListener("click",event => {
+//         const numberElement = cartBox.querySelector(".number");
+//         const decrementButton = cartBox.querySelector("#decrement");
+//         let quantity = numberElement.textContent;
+//         if (event.target.id === "decrement" && quantity > 1){
+//             quantity--;
+//             if (quantity === 1){
+//                 decrementButton.style.color = "#999"
+//         }
+//      } else if(event.target.id === "increment"){
+//                 quantity++;
+//                 decrementButton.style.color = "#333";
+//      }
+//             numberElement.textContent = quantity;
+//             updateTotalPrice();
+//     });
+//     offerupdateCartCount(1);
+//     offerupdateTotalPrice();
+    
+// };
+
+// const offerupdateTotalPrice = () => {
+//     const totalPriceElement = document.querySelector(".total-price");
+//     const cartBoxes = offercartContent.querySelectorAll(".cart-box");
+//     let total = 0;
+//     cartBoxes.forEach(cartBox => {
+//         const priceElement = cartBox.querySelector(".cart-price");
+//         const quantityElement = cartBox.querySelector(".number");
+//         const price = priceElement.textContent.replace("$","");
+//         const quantity = quantityElement.textContent;
+//         total += price * quantity;
+
+//     });
+//     totalPriceElement.textContent = `$${total}`;
+
+// };
+
+// let offercartItemCount = 0;
+// const offerupdateCartCount = change => {
+//     const cartItemCountBadge = document.querySelector(".cart-item-count");
+//     offercartItemCount += change;
+//     if(offercartItemCount > 0){
+//         cartItemCountBadge.style.visibility = "visible";
+//         cartItemCountBadge.textContent = offercartItemCount;
+
+//     }else{
+//         cartItemCountBadge.style.visibility ="hidden";
+//         cartItemCountBadge.textContent = "";
+//     }
+// }
