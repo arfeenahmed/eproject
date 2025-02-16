@@ -18,18 +18,27 @@ html {
 
 .navbar-brand {
     float: left;
-    margin-left: 20px;
     font-size: 24px;
     color: #fff;
     font-weight: bold;
     line-height: 50px;
-    margin-left: 50px;
+    margin-left: 45px;
 }
 .logo{
-    width: 50px;
-    height: 50px;
-    margin-right: 30px;
+    width: 48px;
+    height: 48px;
     position: absolute;
+    top: 19px;
+}
+.side-logo{
+    margin-top: 6px;
+        width: 30px;
+        height: 30px;
+}
+.offcanvas-title{
+    margin-left: 50px;
+    float: left;
+    margin-left: 0;
 }
 
 
@@ -1419,6 +1428,16 @@ form .form-group input:valid~i {
 @media screen and (max-width: 768px) {
 
     /* Home Page */
+    .navbar-brand{
+        margin-left: 35px;
+    }
+    .logo{
+        width: 37px;
+        height: 37px;
+        margin-right: 0;
+        margin-top: 5px;
+        
+    }
     .home-hero {
         width: 100%;
         display: flex;
