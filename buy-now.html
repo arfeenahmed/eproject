@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Jewelry Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    
+
+<body>
+
+    <header>
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html">
+                    <h2>Crystal Jewelry</h2>
+                </a>
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Side Bar -->
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header text-white border-bottom">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Crystal Jewellery</h5>
+                        <button type="button " class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body flex-column flex-lg-row">
+                        <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  mx-2" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="special-offer.html">Special Offers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="new-arrival.html">New Arrival</a>
+                            </li>
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle mx-2" href="new-arrival.html" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                   
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="products.html">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                        <div class="right-nav d-flex justify-content-center align-items-center gap-3">
+                            <input type="text" placeholder="search" class="right-nav-input" id="search-item">
+                            <button class="nav-search text-white text-decoration-none">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <a href="sign.html" class="nav-user text-white text-decoration-none">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+                            <!-- <a href="" class="nav-cart text-white text-decoration-none"> -->
+                            <!-- <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                            <span class="cart-item-count"></span> -->
+
+                        </div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                <span class="cart-item-count"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart-container">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <!-- <div class="cart-box">
+                <img src="img/Neck.png" alt="" class="cart-img">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Rose Quartz Crystal Necklace</h2>
+                    <span class="cart-price">$49.99</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+
+                    </div>
+                </div>
+                <i class="fa-regular fa-trash-can"></i>
+            </div> -->
+        </div>
+        <div class="cart-total">
+            <div class="cart-total-title">Total</div>
+            <div class="total-price">Rs.0.00</div>
+        </div>
+        <button class="cart-buy-btn">Buy Now</button>
+        <span id="cart-close-btn">X</span>
+    </div>
+
+<div class="container-buy-page">
+    <div class="product-buy-page">
+        <img src="img/Neck.png" alt="Rose Quartz Crystal Necklace">
+        <div class="product-details-buy-page">
+            <h2 class="product-title-buy-page">Rose Quartz Crystal Necklace</h2>
+            <p>Our Rose Quartz Crystal Necklace is a timeless piece that radiates love and serenity. Made with
+                genuine rose quartz stones, this necklace adds elegance and positive energy to any outfit. Perfect
+                for everyday wear or as a thoughtful gift for loved ones.</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li>Authentic Rose Quartz crystals</li>
+                <li>Handcrafted design</li>
+                <li>Adjustable chain length</li>
+                <li>Hypoallergenic materials</li>
+            </ul>
+            <p class="price-buy-page">Rs.4990.99</p>
+            <button class="add-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+</div>
+<form action="">
+<div class="payment">
+    <h1 class="payTitle">Personal Information</h1>
+    <label for="name">Name:</label>
+    <input type="text" placeholder="Name" class="payInput" required>
+    <label for="number">Phone Number:</label>
+    <input type="number" placeholder="Phone Number" class="payInput" required>
+    <label for="address">Address:</label>
+    <input type="text" placeholder="Address" class="payInput" required>
+    <h1 class="payTitle">Card Information</h1>
+    <div class="cardIcons">
+        <img src="/img/visa.png" width="40px" class="cardIcon" alt="">
+        <img src="/img/master.png" width="40px" class="cardIcon" alt="">
+    </div>
+    <input type="password" class="payInput" placeholder="Card Number" required>
+    <div class="cardInfo">
+        <input type="text" placeholder="mm" class="payInput sm" required>
+        <input type="text" placeholder="yyy" class="payInput sm" required>
+        <input type="text" placeholder="cvv" class="payInput sm" required>
+    </div>
+    <button class="paybutton">Check Out!</button>
+    <span class="close">X</span>
+</div>
+</form>
+
+
+
+
+
+
+<footer>
+    <div class="footerLeft">
+        <div class="footerMenu">
+            <h1 class="fMenuTitle">About Us</h1>
+            <ul class="fList">
+                <li class="fListItem"><a href="contact.html">Contact</a></li>
+                <li class="fListItem"><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footerMenu">
+            <h1 class="fMenuTitle">Useful Links</h1>
+            <ul class="fList">
+                <li class="fListItem"><a href="special-offer.html">Special Offer</a></li>
+                <li class="fListItem"><a href="new-arrival.html">New Arrival</a></li>
+                <li class="fListItem"><a href="products.html">Products</a></li>
+                <li class="fListItem"><a href="sign.html.html">Sign Up</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="footerMenu">
+            <h1 class="fMenuTitle">Product</h1>
+            <ul class="fList">
+                <li class="fListItem"><a href="products.html#ring">Rings</a></li>
+                <li class="fListItem"><a href="products.html#earring">Earrings</a></li>
+                <li class="fListItem"><a href="products.html#necklace">Necklace</a></li>
+                <li class="fListItem"><a href="products.html#bracelet">Bracelet</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footerRight">
+        <div class="fRightMenu">
+            <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+            <div class="fMail">
+                <input type="text" placeholder="your@email.com" class="fInput">
+                <button class="fButton">Join!</button>
+            </div>
+        </div>
+        
+        <div class="fRightMenu">
+            <h1 class="fMenuTitle">Follow Us.</h1>
+            <div class="fIcons">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        
+        <div class="fRightMenu">
+            <span class="copyright">&copy; Crystal Jewellery. All rights reserved. 2025.</span>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script>
+//     const productButton = document.querySelector(".cart-buy-btn");
+// const payment = document.querySelector(".payment");
+// const close = document.querySelector(".close");
+
+// productButton.addEventListener("click",()=>{
+//     payment.style.display="flex"
+// })
+// close.addEventListener("click",()=>{
+//     payment.style.display="none"
+// });
+
+// const navCart = document.querySelector("#cart-icon");
+// const cartContainer = document.querySelector(".cart-container");
+// const cartClose = document.querySelector("#cart-close-btn");
+
+// navCart.addEventListener("click",() => cartContainer.classList.add("active"));
+// cartClose.addEventListener("click",() => cartContainer.classList.remove("active"));
+
+
+// const cartBtns = document.querySelectorAll(".add-cart-btn");
+// cartBtns.forEach(button => {
+//     button.addEventListener("click", event =>{
+//         const productBox = event.target.closest(".product-buy-page");
+       
+
+//         addToCart(productBox);
+//     });
+// });
+
+// const cartContent = document.querySelector(".cart-content");
+
+// const addToCart = productBox => {
+//     const productImage = productBox.querySelector("img").src; 
+//     const productTitle = productBox.querySelector(".product-title-buy-page").textContent;
+//     const productPrice = productBox.querySelector(".price-buy-page").textContent;
+
+//     const cartItems = cartContent.querySelectorAll(".cart-product-title");
+//     for(let item of cartItems){
+//         if (item.textContent === productTitle){
+//             alert("This item is already in the cart");
+//             return;
+//         }
+//     }
+
+    
+//     const cartBox = document.createElement("div");
+//     cartBox.classList.add("cart-box");
+//     cartBox.innerHTML = `
+//     <img src="${productImage}" alt="" class="cart-img">
+//                 <div class="cart-detail">
+//                     <h2 class="cart-product-title">${productTitle}</h2>
+//                     <span class="cart-price">${productPrice}</span>
+//                     <div class="cart-quantity">
+//                         <button id="decrement">-</button>
+//                         <span class="number">1</span>
+//                         <button id="increment">+</button>
+
+//                     </div>
+//                 </div>
+//                 <i class="fa-regular fa-trash-can"></i>
+//     `;
+
+  
+//     cartContent.appendChild(cartBox);
+//     cartBox.querySelector(".fa-trash-can").addEventListener("click",() => {
+//         cartBox.remove();
+//         updateCartCount(-1);
+//         updateTotalPrice();
+//     });
+//     cartBox.querySelector(".cart-quantity").addEventListener("click",event => {
+//         const numberElement = cartBox.querySelector(".number");
+//         const decrementButton = cartBox.querySelector("#decrement");
+//         let quantity = numberElement.textContent;
+//         if (event.target.id === "decrement" && quantity > 1){
+//             quantity--;
+//             if (quantity === 1){
+//                 decrementButton.style.color = "#999"
+//         }
+//      } else if(event.target.id === "increment"){
+//                 quantity++;
+//                 decrementButton.style.color = "#333";
+//      }
+//             numberElement.textContent = quantity;
+//             updateTotalPrice();
+//     });
+//     updateCartCount(1);
+//     updateTotalPrice();
+// };
+
+// const updateTotalPrice = () => {
+//     const totalPriceElement = document.querySelector(".total-price");
+//     const cartBoxes = cartContent.querySelectorAll(".cart-box");
+//     let total = 0;
+//     cartBoxes.forEach(cartBox => {
+//         const priceElement = cartBox.querySelector(".cart-price");
+//         const quantityElement = cartBox.querySelector(".number");
+//         const price = priceElement.textContent.replace("Rs.","");
+//         const quantity = quantityElement.textContent;
+//         total += price * quantity;
+
+//     });
+//     totalPriceElement.textContent = `Rs.${total}`;
+
+// };
+
+// let cartItemCount = 0;
+// const updateCartCount = change => {
+//     const cartItemCountBadge = document.querySelector(".cart-item-count");
+//     cartItemCount += change;
+//     if(cartItemCount > 0){
+//         cartItemCountBadge.style.visibility = "visible";
+//         cartItemCountBadge.textContent = cartItemCount;
+
+//     }else{
+//         cartItemCountBadge.style.visibility ="hidden";
+//         cartItemCountBadge.textContent = "";
+//     }
+// }
+</script>
+</body>
+
+</html>

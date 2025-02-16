@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Jewelry - Elegant Rose Quartz Necklace</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html">
+                    <h2>Crystal Jewelry</h2>
+                </a>
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Side Bar -->
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header text-white border-bottom">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Crystal Jewellery</h5>
+                        <button type="button " class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body flex-column flex-lg-row">
+                        <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  mx-2" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2 active" aria-current="page" href="special-offer.html">Special
+                                    Offers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="new-arrival.html">New Arrival</a>
+                            </li>
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle mx-2" href="new-arrival.html" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                   
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="products.html">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                        <div class="right-nav d-flex justify-content-center align-items-center gap-3">
+                            <input type="text" placeholder="search" class="right-nav-input" id="search-item">
+                            <button class="nav-search text-white text-decoration-none">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <a href="sign.html" class="nav-user text-white text-decoration-none">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+                            <!-- <a href="" class="nav-cart text-white text-decoration-none"> -->
+                            <!-- <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                            <span class="cart-item-count"></span> -->
+
+                        </div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                <span class="cart-item-count"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart-container">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <!-- <div class="cart-box">
+                <img src="img/Neck.png" alt="" class="cart-img">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">Rose Quartz Crystal Necklace</h2>
+                    <span class="cart-price">$49.99</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+
+                    </div>
+                </div>
+                <i class="fa-regular fa-trash-can"></i>
+            </div> -->
+        </div>
+        <div class="cart-total">
+            <div class="cart-total-title">Total</div>
+            <div class="total-price">Rs.0.00</div>
+        </div>
+        <button class="cart-buy-btn">Buy Now</button>
+        <span id="cart-close-btn">X</span>
+    </div>
+
+    <div class="offer-header">
+        <h1>Special Offer Crystal Jewellry Collection</h1>
+        <p>Exclusive Special Offers</p>
+    </div>
+
+    <!-- <div class="limited-time">
+        Limited Time Offer - Up to 50% Off!
+    </div> -->
+
+
+
+    <!-- Shop Section -->
+    <section class="shop special-offer-shop">
+
+        <div class="product-content special-offer-container">
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer-8.png" alt="">
+                </div>
+                <h2 class="product-title">Ruby Necklace Charms & Pendants Jewellery Emerald, blue, pendant</h2>
+                <div class="product-desc">
+                    <h3>Ruby Necklace Charms</h3>
+                    <p>Crafted with high-quality materials, these charms are perfect for personalizing necklaces or as
+                        thoughtful gifts, making a stunning statement in any style.</p>
+                </div>
+                <p class="original-price">Rs.3,999.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.2000.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer-6.png" alt="">
+                </div>
+                <h2 class="product-title">Cartoon Moon, Locket, Necklace, Pendant, Locket, Necklace</h2>
+                <div class="product-desc">
+                    <h3>Cartoon Moon, Locket and Necklace</h3>
+                    <p> This whimsical piece features a playful moon design and opens to hold cherished memories, making
+                        it a unique and thoughtful gift.</p>
+                </div>
+                <p class="original-price">Rs.5,000.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.2490.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer-4.png" style="height: 185px;" alt="">
+                </div>
+                <h2 class="product-title">Crystal Jewellery Gold Souk Jewellry design, New Year's, gemstone, ring</h2>
+                <div class="product-desc">
+                    <h3>Gold Souk Jewellry</h3>
+                    <p>Featuring vibrant emerald and blue accents. Crafted with attention to detail, these pieces are
+                        perfect for layering or wearing alone, making a statement for any occasion. Don't miss our
+                        special offer to elevate your jewelry collection!</p>
+                </div>
+                <p class="original-price">Rs.3,500.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.1749.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer-10.png" style="height: 205px;" alt="">
+                </div>
+                <h2 class="product-title">Wattens Earring Jewellery Charms & Pendants, Jewellry blue suit, gemstone,
+                    blue, pendant </h2>
+                <div class="product-desc">
+                    <h3>Wattens Earring Jewellery Charms</h3>
+                    <p>Crafted with high-quality materials, these exquisite charms add elegance and sparkle to your
+                        earrings. Perfect for personalizing your collection or as a gift, don’t miss this limited-time
+                        opportunity to enhance your earring style.</p>
+                </div>
+                <p class="original-price">Rs.2,999.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.1500.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer-4-item.png" alt="">
+                </div>
+                <h2 class="product-title">Silver Jewellery Diamond Set Charms & Pendants Sapphire, Jewellery, gemstone,
+                    pendant </h2>
+                <div class="product-desc">
+                    <h3>Diamond Set Charms & Pendants Sapphire</h3>
+                    <p>Each piece is meticulously crafted to showcase the brilliance of diamonds paired with the deep
+                        allure of sapphires, making them perfect for adding a touch of luxury to any outfit or as a
+                        thoughtful gift for a loved one.</p>
+                </div>
+                <p class="original-price">Rs.15,000.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.7500.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer-11.png" style="height: 185px;" alt="">
+                </div>
+                <h2 class="product-title">pair of gold-colored clear gemstone encrusted stud earrings, Earring Gold
+                    plating Jewellery Crystal, Jewellry</h2>
+                <div class="product-desc">
+                    <h3>Earring Gold plating Jewellery </h3>
+                    <p>Featuring a luxurious finish and crafted from high-quality material, make a beautiful addition to
+                        your jewelry collection or a thoughtful gift.</p>
+                </div>
+                <p class="original-price">Rs.4,990.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.2490.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer-3.png" alt="">
+                </div>
+                <h2 class="product-title">Jewellery Engagement ring, exchange of rings, gemstone, ring</h2>
+                <div class="product-desc">
+                    <h3>Jewellery Engagement ring</h3>
+                    <p>Featuring a brilliant center stone and intricate detailing, this elegant and durable piece is
+                        perfect for celebrating love and commitment.</p>
+                </div>
+                <p class="original-price">Rs.6,990.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.3490.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer-5.png" alt="">
+                </div>
+                <h2 class="product-title">Bracelet Jewellery Bijou Pendant, crystal gemstone, blue</h2>
+                <div class="product-desc">
+                    <h3>Bracelet Jewellery</h3>
+                    <p>Crafted with high-quality materials, this stunning piece adds sophistication to any outfit and is
+                        perfect for everyday wear or special occasions.</p>
+                </div>
+                <p class="original-price">Rs.2,500.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.1250.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer-12.png" alt="">
+                </div>
+                <h2 class="product-title">Earring Silver Jewellery, silver, gemstone, white</h2>
+                <div class="product-desc">
+                    <h3>Earring Silver Jewellery</h3>
+                    <p>Crafted from high-quality silver, these lightweight earrings feature a timeless design, perfect
+                        for any occasion.</p>
+                </div>
+                <p class="original-price">Rs.4,490.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.2190.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer2.png" alt="">
+                </div>
+                <h2 class="product-title">Earring Jewellery Crystal, jewellry flower earrings, gemstone</h2>
+                <div class="product-desc">
+                    <h3>Earring Jewellery Crystal</h3>
+                    <p>Featuring sparkling crystals, these lightweight earrings add glamour to any outfit and are
+                        perfect for any occasion.</p>
+                </div>
+                <p class="original-price">Rs.15,000.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.7490.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer earring 1.png" style="height: 180px;" alt="">
+                </div>
+                <h2 class="product-title">Earring Crystal Jewellery, gemston, Earing </h2>
+                <div class="product-desc">
+                    <h3>Earring Crystal Jewellery</h3>
+                    <p>Featuring sparkling crystals, these lightweight earrings add glamour to any outfit and are
+                        perfect for any occasion.</p>
+                </div>
+                <p class="original-price">Rs.15,000.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.2490.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="img/offer-7.png" style="height: 180px;" alt="">
+                </div>
+                <h2 class="product-title">Earring Singapore Jewellery Gold Jewellery</h2>
+                <div class="product-desc">
+                    <h3>Earring Singapore Jewellery</h3>
+                    <p>Featuring a unique design inspired by Singaporean elegance, these lightweight earrings are
+                        perfect for any occasion.</p>
+                </div>
+                <p class="original-price">Rs.15,000.00</p>
+                <div class="price-and-cart">
+                    <span class="price">Rs.2890.00</span>
+                    <button class="add-cart-btn">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+<form action="">
+    <div class="payment">
+        <h1 class="payTitle">Personal Information</h1>
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Name" class="payInput" required>
+        <label for="number">Phone Number:</label>
+        <input type="number" placeholder="Phone Number" class="payInput" required>
+        <label for="address">Address:</label>
+        <input type="text" placeholder="Address" class="payInput" required>
+        <h1 class="payTitle">Card Information</h1>
+        <div class="cardIcons">
+            <img src="/img/visa.png" width="40px" class="cardIcon" alt="">
+            <img src="/img/master.png" width="40px" class="cardIcon" alt="">
+        </div>
+        <input type="password" class="payInput" placeholder="Card Number" required>
+        <div class="cardInfo">
+            <input type="text" placeholder="mm" class="payInput sm" required>
+            <input type="text" placeholder="yyy" class="payInput sm" required>
+            <input type="text" placeholder="cvv" class="payInput sm" required>
+        </div>
+        <button class="paybutton">Check Out!</button>
+        <span class="close">X</span>
+    </div>
+</form>
+
+
+
+
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">About Us</h1>
+                <ul class="fList">
+                    <li class="fListItem"><a href="contact.html">Contact</a></li>
+                    <li class="fListItem"><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Useful Links</h1>
+                <ul class="fList">
+                    <li class="fListItem"><a href="special-offer.html">Special Offer</a></li>
+                    <li class="fListItem"><a href="new-arrival.html">New Arrival</a></li>
+                    <li class="fListItem"><a href="products.html">Products</a></li>
+                    <li class="fListItem"><a href="sign.html.html">Sign Up</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Product</h1>
+                <ul class="fList">
+                    <li class="fListItem"><a href="products.html#ring">Rings</a></li>
+                    <li class="fListItem"><a href="products.html#earring">Earrings</a></li>
+                    <li class="fListItem"><a href="products.html#necklace">Necklace</a></li>
+                    <li class="fListItem"><a href="products.html#bracelet">Bracelet</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footerRight">
+            <div class="fRightMenu">
+                <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+                <div class="fMail">
+                    <input type="text" placeholder="your@email.com" class="fInput">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div>
+
+            <div class="fRightMenu">
+                <h1 class="fMenuTitle">Follow Us.</h1>
+                <div class="fIcons">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="fRightMenu">
+                <span class="copyright">&copy; Crystal Jewellery. All rights reserved. 2025.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

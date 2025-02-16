@@ -1,3 +1,19 @@
+
+const navSearch = document.querySelector('.nav-search');
+const input = document.querySelector('.right-nav-input');
+navSearch.addEventListener('click', () => {
+    if (!input.classList.contains('right-nav-input-open')) {
+        input.classList.add('right-nav-input-open');
+        navSearch.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    }
+    else {
+        input.classList.remove('right-nav-input-open');
+        navSearch.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+    }
+});
+
+
+
 const productButton = document.querySelector(".cart-buy-btn");
 const payment = document.querySelector(".payment");
 const close = document.querySelector(".close");
@@ -7,7 +23,7 @@ productButton.addEventListener("click",()=>{
 })
 close.addEventListener("click",()=>{
     payment.style.display="none"
-})
+});
 
 const navCart = document.querySelector("#cart-icon");
 const cartContainer = document.querySelector(".cart-container");
@@ -21,9 +37,10 @@ const cartBtns = document.querySelectorAll(".add-cart-btn");
 cartBtns.forEach(button => {
     button.addEventListener("click", event =>{
         const productBox = event.target.closest(".product-box");
+        
        
-
-        addToCart(productBox);
+         addToCart(productBox)
+        
     });
 });
 
@@ -33,6 +50,7 @@ const addToCart = productBox => {
     const productImage = productBox.querySelector("img").src; 
     const productTitle = productBox.querySelector(".product-title").textContent;
     const productPrice = productBox.querySelector(".price").textContent;
+    
 
     const cartItems = cartContent.querySelectorAll(".cart-product-title");
     for(let item of cartItems){
@@ -94,12 +112,12 @@ const updateTotalPrice = () => {
     cartBoxes.forEach(cartBox => {
         const priceElement = cartBox.querySelector(".cart-price");
         const quantityElement = cartBox.querySelector(".number");
-        const price = priceElement.textContent.replace("$","");
+        const price = priceElement.textContent.replace("Rs.","");
         const quantity = quantityElement.textContent;
         total += price * quantity;
 
     });
-    totalPriceElement.textContent = `$${total}`;
+    totalPriceElement.textContent = `Rs.${total}`;
 
 };
 
@@ -123,7 +141,7 @@ const updateCartCount = change => {
 
 document.addEventListener('DOMContentLoaded', function () {
             const filterButtons = document.querySelectorAll('.filter-button');
-            const jewelryCards = document.querySelectorAll('.jewelry-card');
+            const productBox = document.querySelectorAll('.product-box');
 
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -134,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     const category = button.dataset.category;
 
-                    jewelryCards.forEach(card => {
+                    productBox.forEach(card => {
                         if (category === 'all' || card.dataset.category === category) {
                             card.style.display = 'block';
                         } else {
@@ -183,117 +201,119 @@ document.addEventListener('DOMContentLoaded', function () {
         });
        
     
+   
 
 
 
 
-//         const newArrivalnavCart = document.querySelector("#cart-icon");
-// const newArrivalcartContainer = document.querySelector(".cart-container");
-// const newArrivalcartClose = document.querySelector("#cart-close-btn");
 
-// newArrivalnavCart.addEventListener("click",() => newArrivalcartContainer.classList.add("active"));
-// newArrivalcartClose.addEventListener("click",() => newArrivalcartContainer.classList.remove("active"));
+// //         const newArrivalnavCart = document.querySelector("#cart-icon");
+// // const newArrivalcartContainer = document.querySelector(".cart-container");
+// // const newArrivalcartClose = document.querySelector("#cart-close-btn");
+
+// // newArrivalnavCart.addEventListener("click",() => newArrivalcartContainer.classList.add("active"));
+// // newArrivalcartClose.addEventListener("click",() => newArrivalcartContainer.classList.remove("active"));
 
 
-const newArrivalcartBtns = document.querySelectorAll(".add-to-cart-btn");
-newArrivalcartBtns.forEach(button => {
-    button.addEventListener("click", event =>{
-        const productBox = event.target.closest(".jewelry-card");
+// const newArrivalcartBtns = document.querySelectorAll(".add-to-cart-btn");
+// newArrivalcartBtns.forEach(button => {
+//     button.addEventListener("click", event =>{
+//         const productBox = event.target.closest(".jewelry-card");
        
 
-        newArrivaladdToCart(productBox);
-    });
-});
+//         newArrivaladdToCart(productBox);
+//     });
+// });
 
-const newArrivalcartContent = document.querySelector(".cart-content");
+// const newArrivalcartContent = document.querySelector(".cart-content");
 
-const newArrivaladdToCart = productBox => {
-    const productImage = productBox.querySelector("img").src; 
-    const productTitle = productBox.querySelector(".jewelry-name").textContent;
-    const productPrice = productBox.querySelector(".jewelry-price").textContent;
+// const newArrivaladdToCart = productBox => {
+//     const productImage = productBox.querySelector("img").src; 
+//     const productTitle = productBox.querySelector(".jewelry-name").textContent;
+//     const productPrice = productBox.querySelector(".jewelry-price").textContent;
 
-    const cartItems = newArrivalcartContent.querySelectorAll(".cart-product-title");
-    for(let item of cartItems){
-        if (item.textContent === productTitle){
-            alert("This item is already in the cart");
-            return;
-        }
-    }
+//     const cartItems = newArrivalcartContent.querySelectorAll(".cart-product-title");
+//     for(let item of cartItems){
+//         if (item.textContent === productTitle){
+//             alert("This item is already in the cart");
+//             return;
+//         }
+//     }
 
     
-    const cartBox = document.createElement("div");
-    cartBox.classList.add("cart-box");
-    cartBox.innerHTML = `
-    <img src="${productImage}" alt="" class="cart-img">
-                <div class="cart-detail">
-                    <h2 class="cart-product-title">${productTitle}</h2>
-                    <p class="cart-price">${productPrice}</p>
-                    <div class="cart-quantity">
-                        <button id="decrement">-</button>
-                        <span class="number">1</span>
-                        <button id="increment">+</button>
+//     const cartBox = document.createElement("div");
+//     cartBox.classList.add("cart-box");
+//     cartBox.innerHTML = `
+//     <img src="${productImage}" alt="" class="cart-img">
+//                 <div class="cart-detail">
+//                     <h2 class="cart-product-title">${productTitle}</h2>
+//                     <p class="cart-price">${productPrice}</p>
+//                     <div class="cart-quantity">
+//                         <button id="decrement">-</button>
+//                         <span class="number">1</span>
+//                         <button id="increment">+</button>
 
-                    </div>
-                </div>
-                <i class="fa-regular fa-trash-can"></i>
-    `;
+//                     </div>
+//                 </div>
+//                 <i class="fa-regular fa-trash-can"></i>
+//     `;
 
   
-    newArrivalcartContent.appendChild(cartBox);
-    cartBox.querySelector(".fa-trash-can").addEventListener("click",() => {
-        cartBox.remove();
-        newArrivalupdateCartCount(-1);
-        newArrivalupdateTotalPrice();
-    });
-    cartBox.querySelector(".cart-quantity").addEventListener("click",event => {
-        const numberElement = cartBox.querySelector(".number");
-        const decrementButton = cartBox.querySelector("#decrement");
-        let quantity = numberElement.textContent;
-        if (event.target.id === "decrement" && quantity > 1){
-            quantity--;
-            if (quantity === 1){
-                decrementButton.style.color = "#999"
-        }
-     } else if(event.target.id === "increment"){
-                quantity++;
-                decrementButton.style.color = "#333";
-     }
-            numberElement.textContent = quantity;
-            newArrivalupdateTotalPrice();
-    });
-    newArrivalupdateCartCount(1);
-    newArrivalupdateTotalPrice();
-};
+//     newArrivalcartContent.appendChild(cartBox);
+//     cartBox.querySelector(".fa-trash-can").addEventListener("click",() => {
+//         cartBox.remove();
+//         newArrivalupdateCartCount(-1);
+//         newArrivalupdateTotalPrice();
+//     });
+//     cartBox.querySelector(".cart-quantity").addEventListener("click",event => {
+//         const numberElement = cartBox.querySelector(".number");
+//         const decrementButton = cartBox.querySelector("#decrement");
+//         let quantity = numberElement.textContent;
+//         if (event.target.id === "decrement" && quantity > 1){
+//             quantity--;
+//             if (quantity === 1){
+//                 decrementButton.style.color = "#999"
+//         }
+//      } else if(event.target.id === "increment"){
+//                 quantity++;
+//                 decrementButton.style.color = "#333";
+//      }
+//             numberElement.textContent = quantity;
+//             newArrivalupdateTotalPrice();
+//     });
+//     newArrivalupdateCartCount(1);
+//     newArrivalupdateTotalPrice();
+// };
 
-const newArrivalupdateTotalPrice = () => {
-    const totalPriceElement = document.querySelector(".total-price");
-    const cartBoxes = cartContent.querySelectorAll(".cart-box");
-    let total = 0;
-    cartBoxes.forEach(cartBox => {
-        const priceElement = cartBox.querySelector(".cart-price");
-        const quantityElement = cartBox.querySelector(".number");
-        const price = priceElement.textContent.replace("$","");
-        const quantity = quantityElement.textContent;
-        total += price * quantity;
+// const newArrivalupdateTotalPrice = () => {
+//     const totalPriceElement = document.querySelector(".total-price");
+//     const cartBoxes = cartContent.querySelectorAll(".cart-box");
+//     let total = 0;
+//     cartBoxes.forEach(cartBox => {
+//         const priceElement = cartBox.querySelector(".cart-price");
+//         const quantityElement = cartBox.querySelector(".number");
+//         const price = priceElement.textContent.replace("$","");
+//         const quantity = quantityElement.textContent;
+//         total += price * quantity;
 
-    });
-    totalPriceElement.textContent = `$${total}`;
+//     });
+//     totalPriceElement.textContent = `$${total}`;
 
-};
+// };
 
-let newArrivalcartItemCount = 0;
-const newArrivalupdateCartCount = change => {
-    const cartItemCountBadge = document.querySelector(".cart-item-count");
-    newArrivalcartItemCount += change;
-    if(newArrivalcartItemCount > 0){
-        cartItemCountBadge.style.visibility = "visible";
-        cartItemCountBadge.textContent = newArrivalcartItemCount;
+// let newArrivalcartItemCount = 0;
+// const newArrivalupdateCartCount = change => {
+//     const cartItemCountBadge = document.querySelector(".cart-item-count");
+//     newArrivalcartItemCount += change;
+//     if(newArrivalcartItemCount > 0){
+//         cartItemCountBadge.style.visibility = "visible";
+//         cartItemCountBadge.textContent = newArrivalcartItemCount;
 
-    }else{
-        cartItemCountBadge.style.visibility ="hidden";
-        cartItemCountBadge.textContent = "";
-    }
-}
+//     }else{
+//         cartItemCountBadge.style.visibility ="hidden";
+//         cartItemCountBadge.textContent = "";
+//     }
+// }
 
 
 
@@ -402,3 +422,79 @@ const newArrivalupdateCartCount = change => {
 //         cartItemCountBadge.textContent = "";
 //     }
 // }
+
+
+
+
+
+
+const buyCartBtns = document.querySelectorAll(".add-cart-btn");
+buyCartBtns.forEach(button => {
+    button.addEventListener("click", event =>{
+        const productBox = event.target.closest(".product-buy-page");
+       
+
+        buyaddToCart(productBox);
+    });
+});
+
+const buyCartContent = document.querySelector(".cart-content");
+
+const buyaddToCart = productBox => {
+    const productImage = productBox.querySelector("img").src; 
+    const productTitle = productBox.querySelector(".product-title-buy-page").textContent;
+    const productPrice = productBox.querySelector(".price-buy-page").textContent;
+
+    const cartItems = buyCartContent.querySelectorAll(".cart-product-title");
+    for(let item of cartItems){
+        if (item.textContent === productTitle){
+            alert("This item is already in the cart");
+            return;
+        }
+    }
+
+    
+    const cartBox = document.createElement("div");
+    cartBox.classList.add("cart-box");
+    cartBox.innerHTML = `
+    <img src="${productImage}" alt="" class="cart-img">
+                <div class="cart-detail">
+                    <h2 class="cart-product-title">${productTitle}</h2>
+                    <span class="cart-price">${productPrice}</span>
+                    <div class="cart-quantity">
+                        <button id="decrement">-</button>
+                        <span class="number">1</span>
+                        <button id="increment">+</button>
+
+                    </div>
+                </div>
+                <i class="fa-regular fa-trash-can"></i>
+    `;
+
+  
+    buyCartContent.appendChild(cartBox);
+    cartBox.querySelector(".fa-trash-can").addEventListener("click",() => {
+        cartBox.remove();
+        updateCartCount(-1);
+        updateTotalPrice();
+    });
+    cartBox.querySelector(".cart-quantity").addEventListener("click",event => {
+        const numberElement = cartBox.querySelector(".number");
+        const decrementButton = cartBox.querySelector("#decrement");
+        let quantity = numberElement.textContent;
+        if (event.target.id === "decrement" && quantity > 1){
+            quantity--;
+            if (quantity === 1){
+                decrementButton.style.color = "#999"
+        }
+     } else if(event.target.id === "increment"){
+                quantity++;
+                decrementButton.style.color = "#333";
+     }
+            numberElement.textContent = quantity;
+            updateTotalPrice();
+    });
+    updateCartCount(1);
+    updateTotalPrice();
+};
+

@@ -3,23 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
+    <title>Signin & Sign up</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
+
 
     <header>
 
@@ -47,7 +44,7 @@
                                 <a class="nav-link" href="home.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link  mx-2 active" aria-current="page" href="about.html">About Us</a>
+                                <a class="nav-link  mx-2" href="about.html">About Us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link mx-2" href="special-offer.html">Special Offers</a>
@@ -96,7 +93,6 @@
             </div>
         </nav>
     </header>
-
     <div class="cart-container">
         <h2 class="cart-title">Your Cart</h2>
         <div class="cart-content">
@@ -112,7 +108,7 @@
 
                     </div>
                 </div>
-                <i class="fa-regular fa-trash-can"></i>
+                <i class="fa-solid fa-trash"></i>
             </div> -->
         </div>
         <div class="cart-total">
@@ -123,59 +119,85 @@
         <span id="cart-close-btn">X</span>
     </div>
 
-    <section class="about-hero">
-        <div class="about-heading">
-            <h1>About Us</h1>
-        </div>
-        <div class="about-container">
-            <div class="about-hero-content">
-                <h2>Our Story</h2>
-                <p>Inspired by the natural beauty of crystals, we started our journey to create unique and elegant
-                    jewelry pieces that resonate with our customers.</p>
-                <h2>Mission and Vision</h2>
-                <p>Our mission is to provide high-quality crystal jewelry that combines traditional craftsmanship with
-                    modern design. We envision a future where our jewelry brings joy and elegance to people's lives.</p>
-                <h2>Our Expertise</h2>
-                <p>With over 20 years of experience in the jewelry industry, our team of skilled artisans meticulously
-                    crafts each piece of jewelry using the finest materials and techniques.</p>
+    <div class="wrapper-container">
+        <div class="wrapper">
+            <div class="form-container sign-up">
+                <form onsubmit="return data()" action="#">
+                    <h2>sign up</h2>
+                    <div class="form-group">
+                        <input type="text" required>
+                        <i class="fas fa-user"></i>
+                        <label for="">username</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" required id="id5">
+                        <i class="fas fa-at"></i>
+                        <label for="">email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" required>
+                        <i class="fas fa-lock"></i>
+                        <label for="">password</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" required id="id4">
+                        <i class="fas fa-lock"></i>
+                        <label for="">confirm password</label>
+                    </div>
+                    <button type="submit" class="sign-btn">sign up</button>
+                    <div class="sign-link">
+                        <p>You already have an account?<a href="#" class="signin-link"> sign in</a></p>
+                    </div>
+                </form>
             </div>
-            <div class="about-hero-img">
-                <img src="img/pngegg (5).png" alt="">
+            <div class="form-container sign-in">
+                <form onsubmit="return data()" action="#">
+                    <h2>login</h2>
+                    <div class="form-group">
+                        <input type="text" required id="id1">
+                        <i class="fas fa-user"></i>
+                        <label for="">username</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" required id="id3">
+                        <i class="fas fa-lock"></i>
+                        <label for="">password</label>
+                    </div>
+                    <div class="forgot-pass">
+                        <a href="#">forgot password?</a>
+                    </div>
+                    <button type="submit" class="sign-btn">login</button>
+                    <div class="sign-link">
+                        <p>Don't have an account?<a href="#" class="signup-link"> sign up</a></p>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
-    <section id="testimonials">
-        <h2>Customer Testimonials</h2>
-        <blockquote>
-            <p>"I absolutely love my crystal necklace! It's beautifully crafted and adds a touch of elegance to any
-                outfit."</p>
-            <cite>— Sara</cite>
-        </blockquote>
-    </section>
-<form action="">
-    <div class="payment">
-        <h1 class="payTitle">Personal Information</h1>
-        <label for="name">Name:</label>
-        <input type="text" placeholder="Name" class="payInput" required>
-        <label for="number">Phone Number:</label>
-        <input type="number" placeholder="Phone Number" class="payInput" required>
-        <label for="address">Address:</label>
-        <input type="text" placeholder="Address" class="payInput" required>
-        <h1 class="payTitle">Card Information</h1>
-        <div class="cardIcons">
-            <img src="/img/visa.png" width="40px" class="cardIcon" alt="">
-            <img src="/img/master.png" width="40px" class="cardIcon" alt="">
-        </div>
-        <input type="password" class="payInput" placeholder="Card Number" required>
-        <div class="cardInfo">
-            <input type="text" placeholder="mm" class="payInput sm" required>
-            <input type="text" placeholder="yyy" class="payInput sm" required>
-            <input type="text" placeholder="cvv" class="payInput sm" required>
-        </div>
-        <button class="paybutton">Check Out!</button>
-        <span class="close">X</span>
     </div>
-</form>
+    <form action="">
+        <div class="payment">
+            <h1 class="payTitle">Personal Information</h1>
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Name" class="payInput" required>
+            <label for="number">Phone Number:</label>
+            <input type="number" placeholder="Phone Number" class="payInput" required>
+            <label for="address">Address:</label>
+            <input type="text" placeholder="Address" class="payInput" required>
+            <h1 class="payTitle">Card Information</h1>
+            <div class="cardIcons">
+                <img src="/img/visa.png" width="40px" class="cardIcon" alt="">
+                <img src="/img/master.png" width="40px" class="cardIcon" alt="">
+            </div>
+            <input type="password" class="payInput" placeholder="Card Number" required>
+            <div class="cardInfo">
+                <input type="text" placeholder="mm" class="payInput sm" required>
+                <input type="text" placeholder="yyy" class="payInput sm" required>
+                <input type="text" placeholder="cvv" class="payInput sm" required>
+            </div>
+            <button class="paybutton">Check Out!</button>
+            <span class="close">X</span>
+        </div>
+    </form>
     <footer>
         <div class="footerLeft">
             <div class="footerMenu">
@@ -212,8 +234,10 @@
             <div class="fRightMenu">
                 <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
                 <div class="fMail">
-                    <input type="text" placeholder="your@email.com" class="fInput" required>
-                    <button class="fButton">Join!</button>
+                    <form action="">
+                        <input type="text" placeholder="your@email.com" class="fInput" required>
+                        <button class="fButton">Join!</button>
+                    </form>
                 </div>
             </div>
 
@@ -235,6 +259,70 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
+    <script>
+        let wrapper = document.querySelector('.wrapper'),
+            signUpLink = document.querySelector('.sign-link .signup-link'),
+            signInLink = document.querySelector('.sign-link .signin-link');
+
+        signUpLink.addEventListener('click', () => {
+            wrapper.classList.add('animated-signin');
+            wrapper.classList.remove('animated-signup');
+        });
+
+        signInLink.addEventListener('click', () => {
+            wrapper.classList.add('animated-signup');
+            wrapper.classList.remove('animated-signin');
+        });
+
+        function data() {
+            let a = document.getElementById('id1').value; // User ID
+            // let b = document.getElementById('id2').value; // Contact
+            let c = document.getElementById('id3').value; // Password
+            let d = document.getElementById('id4').value; // Confirm Password
+            let e = document.getElementById('id5').value; // Email
+
+
+            let namea = /^[A-Za-z]{3,}$/;
+            // Password validation pattern
+            let passwordPattern = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8}$/;
+            // Email validation pattern
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
+            // Check if any field is empty
+            if (a == "" || b == "" || c == "" || d == "" || e == "") {
+                alert('All fields are mandatory');
+                return false;
+
+            } else if (!namea.test(a)) {
+                alert("enter proper alphabet for your name");
+                return false;
+            }
+            // Check if the contact number is exactly 10 digits
+            else if (b.length < 10 || b.length > 10) {
+                alert("Contact number should be exactly 10 digits");
+                return false;
+                // Check if the passwords match
+            } else if (c !== d) {
+                alert('Passwords do not match');
+                return false;
+                // Check if the password meets the required conditions
+            } else if (!passwordPattern.test(c)) {
+                alert('Password must have at least 1 uppercase, 1 lowercase, 1 number, 1 special character, and be at least 8 characters long');
+                return false;
+                // Check if the email is valid using the pattern
+            } else if (!emailPattern.test(e)) {
+                alert("Enter a valid email address");
+                return false;
+
+            } else {
+                // If everything is correct, allow the form to be submitted
+                return true;
+            }
+        }
+
+
+
+    </script>
 </body>
 
 </html>
