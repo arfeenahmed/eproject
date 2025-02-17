@@ -125,7 +125,7 @@
     <div class="wrapper-container">
         <div class="wrapper">
             <div class="form-container sign-up">
-                <form onsubmit="return data()" action="#">
+                <form action="#">
                     <h2>sign up</h2>
                     <div class="form-group">
                         <input type="text" required>
@@ -278,50 +278,50 @@
             wrapper.classList.remove('animated-signin');
         });
 
-        function data() {
-            let a = document.getElementById('id1').value; // User ID
-            // let b = document.getElementById('id2').value; // Contact
-            let c = document.getElementById('id3').value; // Password
-            let d = document.getElementById('id4').value; // Confirm Password
-            let e = document.getElementById('id5').value; // Email
+       
 
+        document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".sign-up form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Form submit hone se roko agar validation fail ho
+        let username = document.querySelector(".sign-up input[type='text']");
+        let email = document.querySelector(".sign-up input[type='email']");
+        let password = document.querySelector(".sign-up input[type='password']");
+        let confirmPassword = document.getElementById("id4");
 
-            let namea = /^[A-Za-z]{3,}$/;
-            // Password validation pattern
-            let passwordPattern = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8}$/;
-            // Email validation pattern
-            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
-            // Check if any field is empty
-            if (a == "" || b == "" || c == "" || d == "" || e == "") {
-                alert('All fields are mandatory');
-                return false;
+        // Validation Errors
+        let errors = [];
 
-            } else if (!namea.test(a)) {
-                alert("enter proper alphabet for your name");
-                return false;
-            }
-            // Check if the contact number is exactly 10 digits
-            else if (b.length < 10 || b.length > 10) {
-                alert("Contact number should be exactly 10 digits");
-                return false;
-                // Check if the passwords match
-            } else if (c !== d) {
-                alert('Passwords do not match');
-                return false;
-                // Check if the password meets the required conditions
-            } else if (!passwordPattern.test(c)) {
-                alert('Password must have at least 1 uppercase, 1 lowercase, 1 number, 1 special character, and be at least 8 characters long');
-                return false;
-                // Check if the email is valid using the pattern
-            } else if (!emailPattern.test(e)) {
-                alert("Enter a valid email address");
-                return false;
-
-            } else {
-                // If everything is correct, allow the form to be submitted
-                return true;
-            }
+        // Username Validation
+        if (username.value.length < 3) {
+            errors.push("Username must be at least 3 characters long.");
         }
+
+        // Email Validation
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email.value)) {
+            errors.push("Please enter a valid email address.");
+        }
+
+        // Password Validation
+        if (password.value.length < 6) {
+            errors.push("Password must be at least 6 characters long.");
+        }
+
+        // Confirm Password Validation
+        if (password.value !== confirmPassword.value) {
+            errors.push("Passwords do not match.");
+        }
+
+        // Show Errors or Submit Form
+        if (errors.length > 0) {
+            alert(errors.join("\n"));
+        } else {
+            alert("Sign-up successful!");
+            this.submit(); // Agar sab sahi hai to form submit ho jaye
+        }
+    });
+});
+
 
 
 

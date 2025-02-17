@@ -99,7 +99,7 @@
     <section class="contact-section">
         <h2>Contact Us</h2>
         <p>Feel free to reach out to us by filling out the form below:</p>
-        <form class="contact-form" action="#" method="post">
+        <form class="contact-form">
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -223,6 +223,67 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
         <script src="script.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".contact-form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Form submit hone se roko agar validation fail ho
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let subject = document.getElementById("subject");
+        let message = document.getElementById("message");
+
+        // Pehle sab error messages hatao
+        document.querySelectorAll(".error-message").forEach(el => el.remove());
+
+        let isValid = true;
+
+        // Full Name Validation
+        if (name.value.trim().length < 3) {
+            showError(name, "Full Name must be at least 3 characters long.");
+            isValid = false;
+        }
+
+        // Email Validation
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email.value.trim())) {
+            showError(email, "Please enter a valid email address.");
+            isValid = false;
+        }
+
+        // Subject Validation
+        if (subject.value.trim() === "") {
+            showError(subject, "Subject cannot be empty.");
+            isValid = false;
+        }
+
+        // Message Validation
+        if (message.value.trim().length < 10) {
+            showError(message, "Message must be at least 10 characters long.");
+            isValid = false;
+        }
+
+        // Agar sab valid hai to form submit ho jaye
+        if (isValid) {
+            alert("Message sent successfully!");
+            this.submit();
+        }
+    });
+
+    // Function to show error message
+    function showError(inputField, message) {
+        let error = document.createElement("p");
+        error.className = "error-message";
+        error.style.color = "red";
+        error.style.fontSize = "14px";
+        error.style.marginTop = "5px";
+        error.innerText = message;
+        inputField.parentNode.appendChild(error);
+    }
+});
+
+
+
+        </script>
 </body>
 
 </html>

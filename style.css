@@ -494,6 +494,28 @@ html {
 
 /* for contact page  */
 /* Contact Section */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+
+
+
 .contact-section {
     padding: 20px;
     text-align: center;
@@ -784,7 +806,7 @@ label {
 
 .payInput {
     padding: 10px;
-    margin: 10px 0px;
+    margin: 5px 0px;
     border: none;
     border-bottom: 1px solid #ce7171;
 }
@@ -851,6 +873,12 @@ label {
     cursor: pointer;
     padding: 2px;
 }
+
+
+
+ 
+
+
 
 
 /* SideBar Cart Section */
