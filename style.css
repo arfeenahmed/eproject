@@ -143,6 +143,7 @@ html {
     z-index: 2;
     margin-top: 50px;
     margin-bottom: 20px;
+    animation: fadeInUp 2s ease;
 }
 
 /* Hero Paragraph */
@@ -169,6 +170,7 @@ html {
     z-index: 3;
     display: inline-block;
     transition: background-color 0.5s ease;
+    animation: fadeInUp 2s ease;
 }
 
 .home-hero a:hover {
@@ -420,7 +422,7 @@ html {
     }
 }
 
-@keyframes fadeInRights {
+@keyframes fadeInRight {
     0% {
         opacity: 0;
         transform: translateX(-50px);
