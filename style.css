@@ -1379,6 +1379,9 @@ form .form-group input:valid~i {
 .wrapper .form-container form .sign-link a:hover {
     color: #da4453;
 }
+.ftinpt{
+    display: flex;
+}
 
 .wrapper .sign-up {
     transform: rotate(7deg);
